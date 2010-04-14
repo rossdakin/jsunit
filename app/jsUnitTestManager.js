@@ -436,7 +436,7 @@ JsUnitTestManager.prototype.abort = function () {
 JsUnitTestManager.prototype.getTimeout = function () {
     var result = JsUnitTestManager.TESTPAGE_WAIT_SEC;
     try {
-        result = eval(this.timeout.value);
+        result = eval(this._uiManager.timeout.value);
     }
     catch (e) {
     }
@@ -446,7 +446,7 @@ JsUnitTestManager.prototype.getTimeout = function () {
 JsUnitTestManager.prototype.getsetUpPageTimeout = function () {
     var result = JsUnitTestManager.SETUPPAGE_TIMEOUT;
     try {
-        result = eval(this.setUpPageTimeout.value);
+        result = eval(this._uiManager.setUpPageTimeout.value);
     }
     catch (e) {
     }
